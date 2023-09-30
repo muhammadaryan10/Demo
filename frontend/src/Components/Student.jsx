@@ -37,7 +37,7 @@ function Student() {
   };
 
   async function fetchData() {
-    const response = await fetch("http://localhost:3000/Studentdata");
+    const response = await fetch("https://demo-git-main-muhammadaryan10.vercel.app/Studentdata");
     const result = await response.json();
     if (response.ok) {
       setData(result);
@@ -63,7 +63,7 @@ function Student() {
   
   const deleteData = async (id) => {
     console.log(id , "====  deleteData ====");
-    const response = await fetch(`http://localhost:3000/${id}`,{
+    const response = await fetch(`https://demo-git-main-muhammadaryan10.vercel.app/${id}`,{
       method: 'DELETE',
     });
     console.log(response?.url,"====== response =====");
@@ -92,7 +92,7 @@ function Student() {
     if (name && email && phone) {
       console.log("Options:", options);
       const response = await fetch(
-        "http://localhost:3000/AddNewStudent",
+        "https://demo-git-main-muhammadaryan10.vercel.app/AddNewStudent",
         options
       );
       console.log("Response:", response);
@@ -124,7 +124,7 @@ function Student() {
       }),
     };
     if (_id && name && email && phone) {
-      const response = await fetch(`http://localhost:3000/UpdateStudent/${_id}`, options);
+      const response = await fetch(`https://demo-git-main-muhammadaryan10.vercel.app/UpdateStudent/${_id}`, options);
       if (response.ok) {
         fetchData(); // Fetch updated data
         setShoweditPopup(false); // Close the edit popup
