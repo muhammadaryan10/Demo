@@ -19,7 +19,7 @@ function Upload() {
     const formData = new FormData();
     formData.append('file', file);
   
-    fetch('http://localhost:3000/upload', {
+    fetch('https://demo-git-main-muhammadaryan10.vercel.app/upload', {
       method: 'POST',
       body: formData,
     })
